@@ -1,0 +1,51 @@
+class Car {
+            constructor (name){
+                this.brand = name;
+            }
+
+            currentCar(){
+                return 'I have a ' +this.brand + '. ';
+            }
+        }
+
+        class Model extends Car {
+            constructor (name, mode){
+                super(name)
+                this.model = mode;
+            }
+
+            currentModel(){
+                return this.currentCar() + 'The Model is ' + this.model + '.';
+            }
+        }
+
+        class Color extends Model {
+            constructor (mode, color){
+                super(name)
+                this.colors = color;
+            }
+
+            currentColor(){
+                return ' It is in ' + this.colors  + ' color.';
+            }
+        }
+
+        class Speed extends Color{
+            constructor(color, speed){
+                super(name)
+                this.speeds = speed;
+            }
+
+            basicSpeed(){
+                return ' This comes with ' + this.speeds + ' V8 Engine.';
+            }
+        }
+
+        const myCar = new Model('Ford', '1968 Mustang Mach 1');
+        document.write(myCar.currentModel());
+
+        const newCar = new Color('1968 Mustang Mach 1', 'Black');
+        document.write(newCar.currentColor());
+
+        const nextCar = new Speed('Black', '220 hp');
+        document.write(nextCar.basicSpeed());
