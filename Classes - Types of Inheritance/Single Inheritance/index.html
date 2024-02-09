@@ -1,0 +1,24 @@
+class Car {
+            constructor (name){
+                this.brand = name
+            }
+        }
+
+        const myCar = new Car ('Ford');
+        document.write(myCar.brand)
+
+
+
+
+        class Car {
+            constructor (name){
+                this.brand = name
+            }
+
+            currentCar(){
+                return 'I have a ' +this.brand;
+            }
+        }
+
+        const myCar = new Car('Ford');
+        document.write(myCar.currentCar());
